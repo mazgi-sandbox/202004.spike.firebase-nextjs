@@ -1,0 +1,12 @@
+*.log
+
+# node
+/node_modules/
+
+# firebase
+/.firebase/
+
+# project specific
+/.env
+/.eslintrc.json
+/.firebaserc

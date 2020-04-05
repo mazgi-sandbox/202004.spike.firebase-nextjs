@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "scripts": {
+    "install": "npm install && npm --prefix frontend install && npm --prefix functions install",
+    "dev": "concurrently \"npm run --prefix frontend dev\" \"npm run --prefix functions build:watch\" \"firebase emulators:start\"",
+    "deploy": "npm --prefix frontend run build && npm --prefix frontend run export && firebase deploy",
+    "firebase": "firebase"
+  },
+  "dependencies": {
+    "firebase": "^7.13.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "concurrently": "^5.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.19.0",
+    "firebase-tools": "^8.0.1",
+    "prettier": "^2.0.2",
+    "typescript": "^3.8.3"
+  }
+}
